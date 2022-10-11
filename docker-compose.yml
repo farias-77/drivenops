@@ -33,6 +33,8 @@ services:
       - build_react:/var/www/html
     depends_on:
       - drivenops_front_app
+      - drivenops_back_app
+      - drivenops_database
 volumes:
   build_react:
   postgres:
