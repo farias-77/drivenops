@@ -8,6 +8,8 @@ services:
       - 2345:5432
     env_file:
       - ./back-end/.env
+    volumes:
+      - postgres:/var/lib/postgresql/data
   drivenops_back_app:
     container_name: drivenops_back_app
     build: ./back-end
@@ -33,3 +35,4 @@ services:
       - drivenops_front_app
 volumes:
   build_react:
+  postgres:
