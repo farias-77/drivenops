@@ -7,7 +7,7 @@ services:
     ports:
       - 2345:5432
     env_file:
-      - /back-end/.env.test
+      - .env.test
 
   drivenops_back_test:
     container_name: drivenops_back_test
@@ -15,6 +15,6 @@ services:
     ports:
       - 5000:5000
     env_file:
-      - /back-end/.env.test
+      - .env.test
     depends_on:
       - drivenops_database_test
