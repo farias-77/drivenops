@@ -22,13 +22,15 @@ services:
   drivenops_front_app:
     build: ./front-end
     container_name: drivenops_front_app
+    env_file:
+      - ./front-end/.env
     volumes: 
       - build_react:/var/www/html
   nginx:
     build: ./nginx
     container_name: nginx
     ports: 
-      - 80:80
+      - 81:80
     volumes:
       - build_react:/var/www/html
     depends_on:
