@@ -11,7 +11,7 @@ function App() {
             const student = response.data;
             if (!student) {
                 alert(
-                    "Xablau! Não há estudantes cadastrados para o sorteio! (runner funcionou!)"
+                    "Xablau! Não há estudantes cadastrados para o sorteio! :("
                 );
             } else {
                 setStudent(student);
