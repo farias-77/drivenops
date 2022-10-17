@@ -10,9 +10,7 @@ function App() {
             const response = await axios.get(`${API_URL}/students/random`);
             const student = response.data;
             if (!student) {
-                alert(
-                    "Xablau! Não há estudantes cadastrados para o sorteio! :("
-                );
+                alert("Opa! Não há estudantes cadastrados para o sorteio! :(");
             } else {
                 setStudent(student);
             }
